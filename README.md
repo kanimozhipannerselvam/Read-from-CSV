@@ -1,38 +1,31 @@
-# Read-from-CSV
-
+# copy-file
 ## AIM:
-To write a python program for reading content from a CSV file.
-
-## ALGORITHM:
-
-### Step 1:Import pandas as pd.
-
-### Step 2:
-Read the CSV file using read_csv method.
-
-### Step 3:
-Use head and tail method to get the required contents from the file.
-
-### Step 4:
-Use len() method to get the number of rows and columns.
-
-### Step 5:
-Print the output.
-```
-
+To write a python program for copying the contents from one file to another file.
+## EQUIPEMENT'S REQUIRED: 
+PC
+Anaconda - Python 3.7
+## ALGORITHM: 
+### Step 1:
+Use open function to open the file in which we want to copy from and access it in read mode.
+### Step 2: 
+Read the file and store in a variable.
+### Step 3: 
+Now create a new file in which we want to paste the content using write access mode.
+### Step 4:  
+Use write function to copy the read file that has been stored in the variable.
+### Step 5: 
+The content in the original file will be copied in the new file.
+### Step 6: 
+End the program.
 ## PROGRAM:
-# Developed by: kanimozhipannerselvam
-# Register Number: 22002752
-
-import pandas as pd
-df = pd.read_csv('pandascsv.csv')
-print(df.head(10))
-print(df.tail())
-print("Number of rows:",len(df.axes[0]))
-print("Number of columns:",len(df.axes[1]))
+```
+with open("sample1.txt", "r") as firstfile:
+    with open("sample2.txt", "a") as secondfile:
+        for line in firstfile:
+            secondfile.write(line)
 ```
 ## OUTPUT:
-![git log](b.png)
-
+![](output_txt1.png)
+![](output_txt2.png)
 ## RESULT:
-Thus a python program is written to read the contents of a CSV file.
+Thus the program is written to copy the contents from one file to another file.
